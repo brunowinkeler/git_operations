@@ -12,8 +12,11 @@ os.system(cmd_)
 with open('repos.txt', 'r') as file_: 
     for line_ in file_:   
         addr_ = line_.split()[0]
-        hash_ = line_.split()[1]
+        hash_ = line_.split()[1]        
         
+        project_ = addr_.split('/')[-1]
+        print('================================= {} ================================='.format(project_))
+
         cmd_ = 'git -C '+ addr_ + ' checkout '+ hash_
         os.system(cmd_)      
 
