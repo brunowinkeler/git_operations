@@ -9,7 +9,7 @@ import os
 cmd_ = 'cls'
 os.system(cmd_)
 
-with open('repos.txt', 'r') as file_: 
+with open('./utils/repos.txt', 'r') as file_: 
     for line_ in file_:   
         addr_ = line_.split()[0]
         hash_ = line_.split()[1]        

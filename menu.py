@@ -12,7 +12,7 @@ os.system('cls')
 
 print('_'*95)
 
-file_ = open('utils/logo.txt', 'r')
+file_ = open('./utils/logo.txt', 'r')
 
 for line_ in file_:
     print(line_.replace('\n',''))
@@ -25,12 +25,15 @@ print('_'*95)
 print("\nWhich of the following options would you like to run?\n".upper())
 
 print('1 - Update to Hash')
-print('2 - Generate Log')
-print('3 - Compile All')
+print('2 - Generate Log [NOT AVAILABLE]')
+print('3 - Compile All [NOT AVAILABLE]')
 
 ans_ = input('\nType your answer: '.upper())
 
 print('\n')
+
+if(ans_ == '1'):
+    os.system('python ./update_to_hash/update_to_hash.py')
 
 
 
